@@ -1,0 +1,13 @@
+<h2>Online Exam</h2>
+<div class="">
+    <% @questions.each_with_index do |q, idx|%>
+    <p><%= idx+1%>. <%= q.title%></p>
+    <ul>
+    <% q.answers.each do |a|%>
+
+<input type="radio" name="<%=q.id%>" class="inline"><%= a.ans%>
+    <%end%>
+    </ul>
+    <%end%>
+
+</div>
